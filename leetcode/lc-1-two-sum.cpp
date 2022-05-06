@@ -6,6 +6,8 @@
 #include <unordered_map>
 using namespace std;
 
+namespace {
+
 typedef int expect_t;
 typedef int index_t;
 
@@ -134,6 +136,8 @@ public:
     }
 };
 
+} // namespace
+
 static SolutionCpp *pcpp_solvers[] = {
         new SolutionCppA(),
         new SolutionCppB(),
@@ -184,3 +188,4 @@ TEST(LeetCode_1_two_sum, Cpp_Example3) {
         EXPECT_EQ(expect, acutal) << " by solution " << typeid(*psolver).name();
     }
 }
+
