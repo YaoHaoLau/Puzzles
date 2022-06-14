@@ -67,7 +67,7 @@ public:
 
         int i = 0;
         while (i <= m - n) {
-            while (haystack[i] != needle[0]) {
+            while (haystack[i] != needle[0] && i <= m - n) {
                 ++ i;
             }
             int j = 0, matched = 0;
@@ -132,7 +132,6 @@ public:
             }
         }
 
-
         return -1;
     }
 };
@@ -155,6 +154,13 @@ TEST(LeetCode_28_implement_strstr, Cpp_Example1) {
 }
 
 TEST(LeetCode_28_implement_strstr, Cpp_Example2) {
+    for (SolutionCpp *psolver: pcpp_solvers) {
+        EXPECT_EQ(-1, psolver->strStr("aaaaa", "bba"))
+                            << " by solution " << typeid(*psolver).name();
+    }
+}
+
+TEST(LeetCode_28_implement_strstr, Cpp_Example3) {
     for (SolutionCpp *psolver: pcpp_solvers) {
         EXPECT_EQ(-1, psolver->strStr("aaaaa", "bba"))
                             << " by solution " << typeid(*psolver).name();
