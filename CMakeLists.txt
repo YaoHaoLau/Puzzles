@@ -4,7 +4,7 @@ PROJECT(Puzzles C CXX)
 SET(CMAKE_C_STANDARD 99)
 SET(CMAKE_CXX_STANDARD 11)
 
-ADD_COMPILE_OPTIONS(-Wall -Werror -fno-strict-aliasing)
+ADD_COMPILE_OPTIONS(-Wall -fno-strict-aliasing)
 
 ENABLE_TESTING()
 
